@@ -1,0 +1,12 @@
+[package]
+name = "advent"
+version = "0.1.0"
+authors = ["Pobiega <robin.aakerman@gmail.com>"]
+edition = "2018"
+
+[lib]
+bench = false
+
+[dependencies]
+aoc-runner = "0.2.0-alpha1"
+aoc-runner-derive = "0.2.0-alpha1"
