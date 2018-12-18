@@ -1,5 +1,5 @@
 #[aoc(day2, part1)]
-fn part1(input: &str) -> i32 {
+pub fn part1(input: &str) -> i32 {
     let codes = input.lines();
 
     let mut twos = 0;
@@ -33,7 +33,7 @@ fn part1(input: &str) -> i32 {
 }
 
 #[aoc(day2, part2)]
-fn part2(input: &str) -> String {
+pub fn part2(input: &str) -> String {
     let codes: Vec<&str> = input.lines().collect();
 
     for code1 in codes.iter() {
@@ -71,28 +71,34 @@ mod tests {
 
     #[test]
     fn part1_test() {
-        assert_eq!(part1(
-"abcdef
+        assert_eq!(
+            part1(
+                "abcdef
 bababc
 abbcde
 abcccd
 aabcdd
 abcdee
 ababab"
-        ), 12);
+            ),
+            12
+        );
     }
 
     #[test]
     fn part2_test() {
-        assert_eq!(part2(
-"abcde
+        assert_eq!(
+            part2(
+                "abcde
 fghij
 klmno
 pqrst
 fguij
 axcye
 wvxyz"
-        ), "fgij");
+            ),
+            "fgij"
+        );
     }
 
     #[test]
@@ -101,7 +107,7 @@ wvxyz"
 
         match test {
             Some(x) => assert_eq!(x, "acde"),
-            None => panic!("part2_differ returned None on known inputs")
+            None => panic!("part2_differ returned None on known inputs"),
         }
     }
 }

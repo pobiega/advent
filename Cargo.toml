@@ -8,5 +8,6 @@ edition = "2018"
 bench = false
 
 [dependencies]
-aoc-runner = "0.2.0-alpha1"
-aoc-runner-derive = "0.2.0-alpha1"
+aoc-runner = "0.2.0"
+aoc-runner-derive = "0.2.0"
+regex = "1.1.0"
